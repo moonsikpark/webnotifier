@@ -6,15 +6,15 @@ To get updates of websites via Telegram, with no hassle(tm)
 
 ## How
 
-1. Fork this repo.
+1. Clone this repo.
 
     git clone https://github.com/moonsikpark/webnotifier.git
 
-2. Edit `main.py` for your needs. Subclass `BaseWebNotifier` and fill in the blanks. Override `collect_data()` with your methods for crunching HTML data. Add your class to `main()`
+2. Edit `src/main.py` for your needs. Subclass `BaseWebNotifier` and fill in the blanks. Override `collect_data()` with your methods for crunching HTML data. Add your class to `main()`
 
 3. Set environment variable `WEBNOTIFIER_LOG_FILE` to your desired log file location and  `WEBNOTIFIER_LOGLEVEL` for the desired log level.
 
-4. Voilà!
+4. Voilà! Add `main.py` to your cron or create a docker image.
 
 WebNotifier provides a base class `BaseWebNotifier`. You need to subclass it to create your own bot.
 
