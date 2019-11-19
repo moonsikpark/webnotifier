@@ -45,6 +45,8 @@ In main.py:
         MyNotifier() # Don't forget to add your class here!-
 
 ## Example
+
+### Code
                 
     from modules.webnotifier import BaseWebNotifier
     from lxml import html
@@ -106,3 +108,6 @@ In main.py:
 
     if __name__ == "__main__":
         main()
+
+### Expected result
+![result](doc/result.jpg?raw=true)
