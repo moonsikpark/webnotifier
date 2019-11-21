@@ -67,7 +67,7 @@ class BaseWebNotifier:
     def __init__(self):
         logger.info(f"Started notifier '{self.notifier_name}'.")
         self.session = requests.session()
-        self.telegram_api_endpoint = f"https://api.telegram.org/{self.telegram_bot_name}:{self.telegram_bot_token}/sendMessage"
+        self.telegram_api_endpoint = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
         self.db_conn = sqlite3.connect(self.db_file, isolation_level="IMMEDIATE")
         self.db_cur = self.db_conn.cursor()
         self.db_cur.execute(SCHEMA.format(notifier_name=self.notifier_name))
